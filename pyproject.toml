@@ -1,0 +1,14 @@
+[project]
+name = "mutagrade"
+version = "0.1.0"
+description = "Grade a Python test suite by injecting small bugs (mutants) and checking whether the tests catch them."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["pytest>=7"]
+
+[project.scripts]
+mutagrade = "mutagrade.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
